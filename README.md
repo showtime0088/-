@@ -1,8 +1,16 @@
 # GMAT Adaptive Practice MVP
 
-This workspace contains the first runnable prototype for a GMAT-style adaptive practice site.
+This workspace contains a GMAT course marketing site plus a runnable GMAT-style adaptive practice prototype.
 
-Open `index.html` in a browser to try the local prototype. It runs fully in the browser with sample questions from `data/questions.json`.
+Open `index.html` in a browser to view the marketing site. Open `practice.html` to try the local prototype. It runs fully in the browser with sample questions from `data/questions.json`.
+
+## Site Pages
+
+- `index.html`: course marketing home page
+- `gmat.html`: GMAT exam overview
+- `courses.html`: GMAT 1-on-1 tutoring and full-course online class pages
+- `teacher.html`: instructor profile and teaching credentials
+- `practice.html`: adaptive practice and Prep-style mock exam tool
 
 ## Current MVP
 

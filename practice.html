@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GMAT Adaptive Practice</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <nav class="practice-nav" aria-label="站点导航">
+        <a href="index.html">首页</a>
+        <a href="gmat.html">GMAT考试</a>
+        <a href="courses.html">课程体系</a>
+        <a href="teacher.html">老师资历</a>
+      </nav>
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">GMAT Adaptive Practice</p>
+          <h1>GMAT 自适应训练</h1>
+        </div>
+        <div class="session-meta" aria-live="polite">
+          <span id="progressLabel">未开始</span>
+          <span id="timerLabel">00:00</span>
+        </div>
+      </section>
+
+      <section id="startView" class="workspace">
+        <div class="intro-panel">
+          <h2>选择训练模式</h2>
+          <p>可以做单项自适应练习，也可以进入一套类似官方 Prep 的完整模考模型。</p>
+          <div class="mode-grid">
+            <button class="mode-card active" id="practiceModeButton" type="button">
+              <strong>单项练习</strong>
+              <span>选择一个模块，完成 10 道自适应题。</span>
+            </button>
+            <button class="mode-card" id="mockModeButton" type="button">
+              <strong>Prep 模考</strong>
+              <span>Quant、Verbal、Data Insights 连续完成，最后生成整套报告。</span>
+            </button>
+          </div>
+          <div id="sectionChooser">
+            <h3>选择练习模块</h3>
+            <div class="section-grid" id="sectionGrid"></div>
+          </div>
+          <div class="mock-preview hidden" id="mockPreview">
+            <h3>Prep 模考结构</h3>
+            <div class="section-flow">
+              <span>Quant 21</span>
+              <span>Verbal 23</span>
+              <span>Data Insights 20</span>
+            </div>
+            <p>模考版按 Quant 21 题、Verbal 23 题、Data Insights 20 题运行，每段独立自适应。</p>
+          </div>
+          <button class="primary-action" id="startButton" type="button">开始练习</button>
+        </div>
+        <aside class="rules-panel">
+          <h2>当前规则</h2>
+          <ul>
+            <li>每个 section 第一题难度为 3</li>
+            <li>答对下一题难度 +1，答错 -1</li>
+            <li>模考中不逐题显示解析</li>
+            <li>完成后展示估算分数、模块表现和回顾</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="breakView" class="break-view hidden">
+        <p class="eyebrow" id="breakEyebrow">Section Complete</p>
+        <h2 id="breakTitle"></h2>
+        <p id="breakSummary"></p>
+        <div class="section-flow" id="breakFlow"></div>
+        <button class="primary-action" id="nextSectionButton" type="button">进入下一段</button>
+      </section>
+
+      <section id="practiceView" class="practice-view hidden">
+        <div class="question-header">
+          <div>
+            <p class="eyebrow" id="questionMeta">Question</p>
+            <h2 id="questionStem"></h2>
+          </div>
+          <div class="difficulty-meter" id="difficultyMeter" aria-label="Difficulty"></div>
+        </div>
+        <div class="choice-list" id="choiceList"></div>
+        <div class="action-row">
+          <button class="secondary-action" id="quitButton" type="button">结束本次</button>
+          <button class="primary-action" id="submitButton" type="button" disabled>提交答案</button>
+        </div>
+      </section>
+
+      <section id="resultView" class="result-view hidden">
+        <div class="result-head">
+          <div>
+            <p class="eyebrow">Practice Report</p>
+            <h2 id="resultTitle">练习报告</h2>
+          </div>
+          <button class="primary-action" id="restartButton" type="button">再练一次</button>
+        </div>
+        <div class="metric-grid" id="metricGrid"></div>
+        <div class="report-layout">
+          <div>
+            <h3>知识点表现</h3>
+            <div id="topicReport" class="topic-report"></div>
+          </div>
+          <div>
+            <h3>答题回顾</h3>
+            <div id="reviewList" class="review-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="data/questions.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

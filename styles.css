@@ -35,6 +35,24 @@ button {
   padding: 28px 0 48px;
 }
 
+.practice-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.practice-nav a {
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .topbar,
 .workspace,
 .practice-view,
