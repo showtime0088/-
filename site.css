@@ -454,7 +454,7 @@ h3 {
   margin-bottom: 76px;
 }
 
-.scoreboard-card,
+.coach-card,
 .support-card {
   padding: 24px;
   border: 1px solid var(--line);
@@ -463,14 +463,14 @@ h3 {
   box-shadow: 0 12px 28px rgba(23, 32, 51, 0.06);
 }
 
-.scoreboard-card {
+.coach-card {
   grid-row: span 3;
   min-height: 460px;
   padding: 34px;
-  background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef8f6 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f7fbff 50%, #fff7ed 100%);
 }
 
-.scoreboard-card h3 {
+.coach-card h3 {
   max-width: 680px;
   margin-bottom: 14px;
   color: var(--navy);
@@ -478,48 +478,55 @@ h3 {
   line-height: 1.12;
 }
 
-.scoreboard-card > p {
+.coach-card p {
   max-width: 720px;
   color: var(--muted);
   line-height: 1.75;
 }
 
-.scoreboard-list {
+.coach-stats {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
   margin: 28px 0;
 }
 
-.scoreboard-list div {
-  min-height: 154px;
-  padding: 20px;
+.coach-stats div {
+  min-height: 104px;
+  padding: 14px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid rgba(216, 222, 232, 0.9);
 }
 
-.scoreboard-list span {
+.coach-stats strong {
   display: block;
-  margin-bottom: 10px;
-  color: var(--coral);
-  font-size: 12px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.scoreboard-list strong {
-  display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: var(--teal);
-  font-size: clamp(42px, 6vw, 66px);
-  line-height: 0.95;
+  font-size: 30px;
 }
 
-.scoreboard-list p {
-  margin: 0;
+.coach-stats span {
   color: var(--muted);
-  line-height: 1.45;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.coach-card ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.coach-card li {
+  padding: 13px 14px;
+  border-radius: 6px;
+  background: rgba(23, 50, 79, 0.08);
+  color: #263345;
+  font-weight: 800;
 }
 
 .support-card {
@@ -753,7 +760,8 @@ h3 {
   .course-detail,
   .advantage-strip,
   .coach-grid,
-  .scoreboard-list,
+  .coach-stats,
+  .coach-card ul,
   .student-grid,
   .schedule-panel,
   .service-grid,
