@@ -1,8 +1,8 @@
 const PRACTICE_LENGTH = 10;
 const MOCK_SECTIONS = [
-  { name: "Quant", questionCount: 10, timeLimitSeconds: 900 },
-  { name: "Verbal", questionCount: 10, timeLimitSeconds: 900 },
-  { name: "Data Insights", questionCount: 10, timeLimitSeconds: 900 }
+  { name: "Quant", questionCount: 21, timeLimitSeconds: 2700 },
+  { name: "Verbal", questionCount: 23, timeLimitSeconds: 2700 },
+  { name: "Data Insights", questionCount: 20, timeLimitSeconds: 2700 }
 ];
 
 const sectionCopy = {

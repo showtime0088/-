@@ -20,7 +20,7 @@ Build a small, testable GMAT-style adaptive practice system before building the 
 The mock exam mode imitates the structure of an official Prep experience at prototype scale.
 
 - Section order: Quant, Verbal, Data Insights
-- Demo length: 10 questions per section
+- Section length: Quant 21 questions, Verbal 23 questions, Data Insights 20 questions
 - Each section has its own adaptive difficulty path
 - Each new section resets target difficulty to 3
 - Users receive a section-complete screen before moving to the next section

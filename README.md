@@ -20,7 +20,7 @@ Open `index.html` in a browser to try the local prototype. It runs fully in the 
 The mock mode is a product prototype, not an official scoring clone.
 
 - 3 sections: Quant, Verbal, Data Insights
-- 10 questions per section in this demo question bank
+- Section lengths: Quant 21, Verbal 23, Data Insights 20
 - Each section adapts independently
 - Explanations are withheld until the final report
 - Final report estimates a 205-805 style total score from weighted section performance
