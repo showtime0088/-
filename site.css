@@ -318,6 +318,49 @@ h3 {
   padding: 86px 0 32px;
 }
 
+.course-hero {
+  min-height: 520px;
+  display: grid;
+  align-content: center;
+  gap: 26px;
+  width: min(1120px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 86px 0 52px;
+}
+
+.course-hero h1 {
+  max-width: 1080px;
+  color: var(--navy);
+  font-size: clamp(38px, 5.2vw, 68px);
+  word-break: keep-all;
+}
+
+.course-hero p {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+.promise-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.promise-row span {
+  display: grid;
+  place-items: center;
+  min-height: 150px;
+  border: 2px dashed rgba(181, 71, 8, 0.42);
+  border-radius: 999px;
+  background: #fff7ed;
+  color: var(--coral);
+  font-size: 24px;
+  font-weight: 900;
+}
+
 .page-hero h1,
 .teacher-hero h1 {
   color: var(--navy);
@@ -360,6 +403,139 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
+}
+
+.vip-section {
+  width: min(1120px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding-bottom: 38px;
+}
+
+.section-head.centered {
+  max-width: 780px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.section-head.centered p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.pill-grid,
+.student-grid,
+.service-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.pill-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 76px;
+}
+
+.pill-grid article {
+  min-height: 230px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 12px 28px rgba(23, 32, 51, 0.06);
+}
+
+.pill-grid strong,
+.service-grid strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--navy);
+  font-size: 24px;
+}
+
+.pill-grid p,
+.service-grid p,
+.schedule-panel p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.student-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 76px;
+}
+
+.student-grid article {
+  display: grid;
+  place-items: center;
+  min-height: 150px;
+  padding: 24px;
+  border-radius: 8px;
+  color: #263345;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 900;
+}
+
+.student-grid article:nth-child(1),
+.student-grid article:nth-child(4) {
+  background: #fff1f2;
+}
+
+.student-grid article:nth-child(2) {
+  background: #eef8f6;
+}
+
+.student-grid article:nth-child(3) {
+  background: #eef4ff;
+}
+
+.schedule-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 34px;
+  align-items: center;
+  margin-bottom: 76px;
+  padding: 42px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffffff 56%, #eef8f6 100%);
+  border: 1px solid var(--line);
+}
+
+.subject-list {
+  display: grid;
+  gap: 14px;
+}
+
+.subject-list div {
+  padding: 22px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 10px 24px rgba(23, 32, 51, 0.05);
+}
+
+.subject-list strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 22px;
+}
+
+.subject-list span {
+  color: #9b6b66;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.service-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 32px;
+}
+
+.service-grid article {
+  min-height: 210px;
+  padding: 30px;
+  border-radius: 8px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(23, 32, 51, 0.06);
 }
 
 .course-detail.muted {
@@ -483,9 +659,19 @@ h3 {
   .split-section,
   .timeline,
   .course-detail,
+  .promise-row,
+  .pill-grid,
+  .student-grid,
+  .schedule-panel,
+  .service-grid,
   .teacher-hero,
   .credentials-grid {
     grid-template-columns: 1fr;
+  }
+
+  .promise-row span {
+    min-height: 92px;
+    border-radius: 8px;
   }
 
   .stats-band {
