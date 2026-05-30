@@ -342,23 +342,42 @@ h3 {
   line-height: 1.75;
 }
 
-.promise-row {
+.advantage-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  gap: 14px;
   margin-top: 18px;
 }
 
-.promise-row span {
-  display: grid;
-  place-items: center;
-  min-height: 150px;
-  border: 2px dashed rgba(181, 71, 8, 0.42);
-  border-radius: 999px;
-  background: #fff7ed;
+.advantage-strip article {
+  min-height: 168px;
+  padding: 22px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(216, 222, 232, 0.92);
+  box-shadow: 0 14px 34px rgba(23, 32, 51, 0.07);
+}
+
+.advantage-strip span {
+  display: inline-flex;
+  margin-bottom: 18px;
   color: var(--coral);
-  font-size: 24px;
+  font-size: 13px;
   font-weight: 900;
+}
+
+.advantage-strip strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--navy);
+  font-size: 25px;
+}
+
+.advantage-strip p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .page-hero h1,
@@ -422,20 +441,21 @@ h3 {
   line-height: 1.7;
 }
 
-.pill-grid,
+.coach-grid,
 .student-grid,
 .service-grid {
   display: grid;
   gap: 18px;
 }
 
-.pill-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.coach-grid {
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.75fr);
+  align-items: stretch;
   margin-bottom: 76px;
 }
 
-.pill-grid article {
-  min-height: 230px;
+.coach-card,
+.support-card {
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -443,7 +463,86 @@ h3 {
   box-shadow: 0 12px 28px rgba(23, 32, 51, 0.06);
 }
 
-.pill-grid strong,
+.coach-card {
+  grid-row: span 3;
+  min-height: 460px;
+  padding: 34px;
+  background: linear-gradient(135deg, #ffffff 0%, #f7fbff 50%, #fff7ed 100%);
+}
+
+.coach-card h3 {
+  max-width: 680px;
+  margin-bottom: 14px;
+  color: var(--navy);
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.12;
+}
+
+.coach-card p {
+  max-width: 720px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.coach-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 28px 0;
+}
+
+.coach-stats div {
+  min-height: 104px;
+  padding: 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(216, 222, 232, 0.9);
+}
+
+.coach-stats strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--teal);
+  font-size: 30px;
+}
+
+.coach-stats span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.coach-card ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.coach-card li {
+  padding: 13px 14px;
+  border-radius: 6px;
+  background: rgba(23, 50, 79, 0.08);
+  color: #263345;
+  font-weight: 800;
+}
+
+.support-card {
+  min-height: 140px;
+  border-left: 4px solid var(--teal);
+}
+
+.support-card span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--coral);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.support-card strong,
 .service-grid strong {
   display: block;
   margin-bottom: 12px;
@@ -451,7 +550,7 @@ h3 {
   font-size: 24px;
 }
 
-.pill-grid p,
+.support-card p,
 .service-grid p,
 .schedule-panel p {
   color: var(--muted);
@@ -659,8 +758,10 @@ h3 {
   .split-section,
   .timeline,
   .course-detail,
-  .promise-row,
-  .pill-grid,
+  .advantage-strip,
+  .coach-grid,
+  .coach-stats,
+  .coach-card ul,
   .student-grid,
   .schedule-panel,
   .service-grid,
@@ -669,9 +770,9 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .promise-row span {
-    min-height: 92px;
-    border-radius: 8px;
+  .advantage-strip article,
+  .support-card {
+    min-height: auto;
   }
 
   .stats-band {
