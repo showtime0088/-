@@ -1,15 +1,15 @@
 :root {
-  --ink: #18212f;
-  --muted: #667085;
-  --line: #d9dee8;
+  --ink: #17131f;
+  --muted: #6f6b7d;
+  --line: #e4e1ec;
   --surface: #ffffff;
-  --band: #f4f7fb;
-  --navy: #1e3a5f;
-  --teal: #0f766e;
-  --gold: #b7791f;
+  --band: #f4effc;
+  --navy: #2a184a;
+  --teal: #7b5ac7;
+  --gold: #f5a132;
   --red: #b42318;
   --green: #157347;
-  --shadow: 0 20px 50px rgba(24, 33, 47, 0.08);
+  --shadow: 0 20px 50px rgba(62, 42, 104, 0.12);
 }
 
 * {
@@ -19,7 +19,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(180deg, #f7fafc 0%, #edf3f8 100%);
+  background: linear-gradient(180deg, #f8f7fb 0%, #ede9f7 100%);
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -37,20 +37,26 @@ button {
 
 .practice-nav {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 12px;
+  align-items: center;
+  margin-bottom: 18px;
 }
 
 .practice-nav a {
-  padding: 9px 12px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
+  padding: 11px 16px;
+  border: 1px solid #eee8f7;
+  border-radius: 999px;
   background: #ffffff;
-  color: var(--navy);
+  color: #111111;
   font-size: 14px;
   font-weight: 800;
   text-decoration: none;
+  box-shadow: 0 8px 18px rgba(62, 42, 104, 0.06);
+}
+
+.practice-nav a:hover {
+  color: var(--teal);
 }
 
 .topbar,
@@ -183,8 +189,8 @@ h3 {
 .mode-card.active,
 .section-option.active {
   border-color: var(--teal);
-  outline: 3px solid rgba(15, 118, 110, 0.14);
-  background: #f0fdfa;
+  outline: 3px solid rgba(123, 90, 199, 0.16);
+  background: #f4effc;
 }
 
 .mock-preview {
@@ -209,7 +215,7 @@ h3 {
 
 .section-flow span.active {
   border-color: var(--teal);
-  background: #f0fdfa;
+  background: #f4effc;
   color: var(--teal);
 }
 
